@@ -1,0 +1,18 @@
+.nav1 {
+  display: inline;
+  padding: 5px;
+  font-size: 1.3rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.nav1:hover {
+  background-color: coral;
+}
+.navbar1 {
+  margin: 0;
+  background-color: rgba(40, 167, 218, 0.61);
+  height: 5vh;
+  width: 100%;
+  color: white;
+  padding: 5px;
+}

@@ -1,0 +1,42 @@
+<!--div class="row">
+  <div class="card col-3" style="width: 18rem;" *ngFor="let player of players">
+    <div class="card-body">
+      <div class="card-text">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{player.nom}} {{player.prenom}}</li>
+          <li class="list-group-item">Taille : {{player.taille}}</li>
+          <li class="list-group-item">Poids : {{player.poids}}</li>
+          <li class="list-group-item">Numero : {{player.numero}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div -->
+<table class="table table-striped"  *ngIf="players.length > 0">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Prenom</th>
+      <th scope="col">Numero</th>
+      <th scope="col">Taille</th>
+      <th scope="col">Poids</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let player; index as i; of players">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{player.nom}}</td>
+      <td>{{player.prenom}}</td>
+      <td>{{player.numero}}</td>
+      <td>{{player.taille}}</td>
+      <td>{{player.poids}}</td>
+      <td class="btn-group btn-group-sm">
+        <button class="btn btn-info"><fa name="eye"></fa></button>
+        <button class="btn btn-warning" (click)="edit(i)"><fa name="edit"></fa></button>
+        <button class="btn btn-danger" (click)="delete(player.id, i)"><fa name="trash"></fa></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
