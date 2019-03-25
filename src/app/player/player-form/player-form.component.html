@@ -9,13 +9,13 @@
           <h2 class="text-center">Ajouter votre joueur ici</h2>
           <form [formGroup]="form" id="new-player-form" (ngSubmit)="addPlayer()">
 
-            <div class="form-grup">
+            <div class="form-group">
               <label for="nom" class="col-sm-2">Nom :</label>
               <input type="text" formControlName="nom" class="form-control">
               <p *ngIf="form.get(['nom']).invalid && form.get(['nom']).touched" class="alert alert-danger">ce champ est
                 obligatoire</p>
             </div>
-            <div class="form-grup">
+            <div class="form-group">
               <label for="prnom" class="col-sm-2">Prenom :</label>
               <input type="text" formControlName="prenom" class="form-control">
               <p *ngIf="form.get(['prenom']).invalid && form.get(['prenom']).touched" class="alert alert-danger">ce
